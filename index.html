@@ -491,12 +491,19 @@
           </div>
 
           <form
-            action="forms/contact.php"
-            method="post"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
             class="php-email-form"
             data-aos="fade-up"
             data-aos-delay="300"
           >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
             <div class="row gy-4">
               <div class="col-md-6">
                 <input
@@ -504,7 +511,7 @@
                   name="name"
                   class="form-control"
                   placeholder="Your Name"
-                  required=""
+                  required
                 />
               </div>
 
@@ -514,7 +521,7 @@
                   class="form-control"
                   name="email"
                   placeholder="Your Email"
-                  required=""
+                  required
                 />
               </div>
 
@@ -524,7 +531,7 @@
                   class="form-control"
                   name="subject"
                   placeholder="Subject"
-                  required=""
+                  required
                 />
               </div>
 
@@ -534,7 +541,7 @@
                   name="message"
                   rows="6"
                   placeholder="Message"
-                  required=""
+                  required
                 ></textarea>
               </div>
 
@@ -549,6 +556,7 @@
               </div>
             </div>
           </form>
+
           <!-- End Contact Form -->
         </div>
       </section>
@@ -572,7 +580,8 @@
         </div>
         <div class="container">
           <div class="copyright">
-            <span>Copyright</span> <strong class="px-1 sitename">Meron Solomon</strong>
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Meron Solomon</strong>
             <span>All Rights Reserved</span>
           </div>
           <div class="credits">
